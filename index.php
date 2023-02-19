@@ -110,9 +110,4 @@ if ($variable1 < $variable2){
  // constantes Predefinidas
  echo __LINE__ . "<br>";
  echo "vas por la línea que has visto y estas en el archivo:" . __FILE__ . "<br>";
- 
-
-
- 
-
-?>
+ ?>
