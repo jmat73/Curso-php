@@ -115,7 +115,6 @@ echo "El resultado de las casas es:". $resultado . "<br>";
 
 /* OPERADORES DE COMPARACIÓN  ==  para valor y === para valor y tipo
 != Diferente para valor y <> para valor y tipo,mas los tipicos mayor >, menor< etc*/ 
-
 $variable1=9;
 $variable2=7;
 
@@ -128,7 +127,6 @@ if ($variable1 < $variable2){
     echo " elprimer valor a comparar es $variable2" . "<br>";
     echo " $variable1 es mayor que $variable2" . "<br>";  
 }
- 
  /* DECLARACION DE CONSTANTES  **** https://www.php.net/manual/es/language.constants.syntax.php ***
  define("NOMBRE_CONSTANTE", Valor); el nomnbre por convenio en mayusculas, no simbolo$
  obligatorio define(), es de ambito global, solo valores escalares(int, bool, string, float[arrays NO]) */
@@ -146,7 +144,6 @@ if ($variable1 < $variable2){
  /* Paara los acentos & + vocal_con_acento + acute;+resto_palabra---> Cuídate = "Cu&íacute;date"; */
  
  /* OPERADORES Y SU PRECEDENCIA **** https://www.php.net/manual/es/language.operators.precedence.php ***
- no asociativo	clone new	clone and new
 izquierda	[	array()
 derecha	**	aritmética
 derecha	++ -- ~ (int) (float) (string) (array) (object) (bool) @	tipos e incremento/decremento
@@ -167,15 +164,5 @@ izquierda	? :	ternario
 derecha	= += -= *= **= /= .= %= &= |= ^= <<= >>=	asignación
 izquierda	and	lógico
 izquierda	xor	lógico
-izquierda	or	lógico
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- ?>
+izquierda	or	lógico */
+?>
