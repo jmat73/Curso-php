@@ -13,7 +13,8 @@ ademas admite variables separadas por coma y te las muestras, ademas echo no dev
 por lo que suele usar echo para imprimir en pantalla */
 
 
-/* VARIABLES --> COMIENZAN CON EL SIMBOLO $, SIN SIGNOS EXTRAÑOS, NO COMENZAR POR NUMERO PERO LOS ADMITE EN EL MEDIO*/
+/* VARIABLES --> **** https://www.php.net/manual/es/language.variables.basics.php ***
+COMIENZAN CON EL SIMBOLO $ Y UNA LETRA 0 _ [a-zA-Z_], NO COMENZAR POR NUMERO */
  $nombre= "Jose Manuel";/* Es poco Tipado o Flexible con el tipo de dato*/
  $edad= 49;
 
@@ -22,7 +23,7 @@ por lo que suele usar echo para imprimir en pantalla */
  /*Casting inplicito no hace falta indicar el tipo de variable lo hace el sistema*/
  $num1="5";// aunque es un Nº lo guarda como string al ponerlo Tú como cadena de texto.
 
- /*Casting explicito no hace falta indicar el tipo de variable lo hace el sistema*/
+ /*Casting explicito Tú indicas el tipo de variable según lo necesites*/
  $resultadoexpl=(int)$num1;
 
  /* CONCATENAR CON VARIABLES COn . , CONVIEN DEJAR EL ESPACIO EN BLANCO ENTRE EL PUNTO*/
@@ -31,18 +32,36 @@ echo  "<br>El nombre del aprendiz es " . $nombre . " y su edad " . $edad . "año
 
 echo  "<br>El nombre del aprendiz es  $nombre y su edad  $edad años."; //sin concatenar dentro del String
 
+/* AMBITO VARIABLES https://www.php.net/manual/es/language.variables.scope.php El ámbito de una variable es el contexto 
+dentro del que la variable está definida. La mayor parte de las variables PHP sólo tienen un ámbito simple.*/
 
+/*  EJEMPLO:
+$a = 1; // ámbito global 
+
+function test(){
+    echo $a; // referencia a una variable del ámbito local DENTRO DE LA FUNCIÓN 
+}
+
+test();*/ 
+
+/*uso de global DENTRO DE LA FUNCIÓN: 
+function Suma()
+{
+    global $a, $b;// HACE globales dentro de la función
+
+    $b = $a + $b;
+}
 
 
 /* FUNCIONES*/
 
-/*declaracion de la función*/
+/*declaracion de la función  function nombreFuncion(PARAMETROS) */
 function nombreFuncion() { 
 echo "<br>Este es el mensaje de dentro de la función. <br>";
 }; 
 
-/*Llamada a la función*/
-nombreFuncion();
+/*Llamada a la función
+nombreFuncion(); 
 
 
 /* FUNCIONES EXTERNAS LLAMADAS DESDE OTRO ARCHIVO*/
@@ -71,7 +90,7 @@ incremetVariable();
 incremetVariable();
 
 
-/*STRINGS Y COMO DECLARARLOS. COMPARAR */
+/*STRINGS Y COMO DECLARARLOS. COMPARAR **** https://www.php.net/manual/es/language.types.string.php *** */
 echo "<br>Hola, el  String resaltado es: " .  "<p class=\"resaltar\"> JOSE</p>"; /* resaltar con el estilo creado línea1
 
 /*COMPARAR STRING -->strcmp compara teniendo en cuenta MAY, y strcasecmp no distingue MAYsC, devuelven 1/0(True/False) 
@@ -81,7 +100,7 @@ $Nombre2="CASA";
 $resultado=strcmp($Nombre1,$Nombre2);
 echo "El resultado de las casas es:". $resultado . "<br>";
 
-/* OPERADORES DE COMPARACIÓ  ==  para valor y === para valor y tipo
+/* OPERADORES DE COMPARACIÓN  ==  para valor y === para valor y tipo
 != Diferente para valor y <> para valor y tipo,mas los tipicos mayor >, menor< etc*/ 
 
 $variable1=9;
@@ -97,19 +116,19 @@ if ($variable1 < $variable2){
     echo " $variable1 es mayor que $variable2" . "<br>";  
 }
  
- /* DECLARACION DE CONSTANTES   define("NOMBRE_CONSTANTE", Valor); el nomnbre por convenio en mayusculas, no simbolo$
+ /* DECLARACION DE CONSTANTES  **** https://www.php.net/manual/es/language.constants.syntax.php ***
+ define("NOMBRE_CONSTANTE", Valor); el nomnbre por convenio en mayusculas, no simbolo$
  obligatorio define(), es de ambito global, solo valores escalares(int, bool, string, float[arrays NO]) */
-
- define("HOLA_CONSTANTE", "Primera Constante", true); //el True hace posible que otra persona llamae a la CTE en minuscula
- define("AUTOR", "josé Manuel");
- 
+ define("HOLA_CONSTANTE", "Primera Constante", true); //el True hace posible que otra persona llamae a la CTE en minuscula.
  echo hola_constante . "<br>";// da error, no esta definida la constante, pero PHP lo usa por el True de la definida.
+ 
+ define("AUTOR", "josé Manuel");
  echo "El autor es: AUTOR <br>"; //esto no dara el valor de la constante debe concatenar
  echo "El autor es: " . AUTOR . "<br>" ; 
 
- // constantes Predefinidas
+ // constantes Predefinidas **** https://www.php.net/manual/es/language.constants.predefined.php ****
  echo __LINE__ . "<br>";
  echo "vas por la línea que has visto y estas en el archivo:" . __FILE__ . "<br>";
 
- /* Paara los acentos & + vocal_con_acento + acute;+resto_palabra---> Cuídate = "Cu&íacute;date";
+ /* Paara los acentos & + vocal_con_acento + acute;+resto_palabra---> Cuídate = "Cu&íacute;date"; */
  ?>
