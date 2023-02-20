@@ -2,7 +2,6 @@
     .resaltar{
         color:firebrick;
         font-weight:bold;
-
     }
 </style>
 
@@ -41,7 +40,6 @@ $a = 1; // ámbito global
 function test(){
     echo $a; // referencia a una variable del ámbito local DENTRO DE LA FUNCIÓN 
 }
-
 test();*/ 
 
 /*uso de global DENTRO DE LA FUNCIÓN: 
