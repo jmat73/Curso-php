@@ -52,6 +52,21 @@ function Suma()
     $b = $a + $b;
 }
 
+/* Superglobals https://www.php.net/manual/es/language.variables.superglobals.php* Superglobals son variables internas
+ que están disponibles siempre en todos los ámbitos
+ Las variables superglobals son:
+$GLOBALS
+$_SERVER
+$_GET
+$_POST
+$_FILES
+$_COOKIE
+$_SESSION
+$_REQUEST
+$_ENV
+ */ 
+
+
 
 /* FUNCIONES*/
 
