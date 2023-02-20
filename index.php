@@ -65,7 +65,6 @@ $_ENV
  */ 
 
 
-
 /* FUNCIONES*/
 
 /*declaracion de la función  function nombreFuncion(PARAMETROS) */
@@ -75,7 +74,6 @@ echo "<br>Este es el mensaje de dentro de la función. <br>";
 
 /*Llamada a la función
 nombreFuncion(); 
-
 
 /* FUNCIONES EXTERNAS LLAMADAS DESDE OTRO ARCHIVO*/
 
@@ -101,7 +99,6 @@ function incremetVariable(){
 }
 incremetVariable();
 incremetVariable();
-
 
 /*STRINGS Y COMO DECLARARLOS. COMPARAR **** https://www.php.net/manual/es/language.types.string.php *** */
 echo "<br>Hola, el  String resaltado es: " .  "<p class=\"resaltar\"> JOSE</p>"; /* resaltar con el estilo creado línea1
