@@ -4,4 +4,6 @@ El curso de PHP en:
 https://www.youtube.com/watch?v=I75CUdSJifw&list=PLU8oAlHdN5BkinrODGXToK9oPAlnJxmW_&index=1
 
 
+Para hacerlo mas vistosa he usado una plantilla Landing Page
+
 Saludos a Todos
